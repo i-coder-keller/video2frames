@@ -2,7 +2,7 @@
 
 [video2frames]()使用[ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)导出 🔥
 
-## Installation
+## Installation 📦
 
 
 在浏览器中使用:
@@ -20,7 +20,7 @@ $ npm install -S video2frames
 $ yarn install -S video2frames
 ```
 
-## Example
+## Example 👏
 ```js
 import video2frames from '../index.js'
 const arr = []
@@ -28,7 +28,7 @@ const url = ''
 video2frames(url, arr, 200)
 ```
 
-## API
+## API 🌟
 - source [String]
 
     视频地址，如本地文件请转为Blob Url使用
