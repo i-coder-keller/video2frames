@@ -13,16 +13,16 @@
 ```
 或者您使用了包管理工具如`npm`或`yarn`:
 ```shell
-$ npm install -S video2frames
+$ npm install video2frames
 ```
 或
 ```shell
-$ yarn install -S video2frames
+$ yarn add video2frames
 ```
 
 ## Example 👏
 ```js
-import video2frames from '../index.js'
+import video2frames from 'video2frames'
 const arr = []
 const url = ''
 video2frames(url, arr, 200)
