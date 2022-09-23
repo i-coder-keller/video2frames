@@ -32,7 +32,6 @@ function validate(source, container, time, sync) {
  * @param {String} source 
  * @param {Array} container 
  * @param {Number} time 
- * @param {Boolean} sync 
  */
 
 function index(source, container, time, sync = false) {
