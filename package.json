@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "Fast frame extraction from video in web applications",
   "main": "index.js",
-  "scripts": {
-    "test": ""
-  },
   "keywords": ["video", "mp4", "image", "frames"],
   "author": "keller <yongzhi1.liu@gmail.com>",
+  "homepage": "https://github.com/i-coder-keller/video2frames",
   "license": "ISC"
 }
