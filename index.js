@@ -31,9 +31,8 @@ function validate(source, container, time, sync) {
 function video2frames(source, container, time, callback) {
     const video = document.createElement("video")
     video.setAttribute("src", source)
+    video.currentTime = i
     video.onloadedmetadata = function() {
-        let i = 0
-        while( i <= video.duration) {
             const canvas = document.createElement("canvas")
             canvas.width = video.videoWidth
             canvas.height = video.videoHeight
@@ -42,13 +41,23 @@ function video2frames(source, container, time, callback) {
             const image = canvas.toDataURL("image/jepg")
             container.push(image)
             callback(container, image)
-            i += time
-            if ( i > video.duration && i < video.duration + time) {
-                i = video.duration
+        }
+    }
+
+    function startFrames(source, container, time, callback) {
+        const v = document.createElement("video")
+        v.setAttribute("src", source)
+        v.onloadedmetadata = function () {
+            let i = 0
+            while(i<= v.duration) {
+                video2frames(source, container, i, callback)
+                i += time
+                if (i > v.duration && i < v.duration + time) {
+                    i = v.duration
+                }
             }
         }
     }
-}
 /**
  * 
  * @param {String} source 
@@ -64,7 +73,8 @@ function index(source, container, time, callback = () => {}) {
                 console.error(result.error)
                 return
             }
-            video2frames(source, container, time, callback)
+            
+            startFrames(source, container, time, callback)
         })
         .catch(function (reason) { 
             console.error(reason)
