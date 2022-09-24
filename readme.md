@@ -38,3 +38,9 @@ video2frames(url, arr, 200)
 - time
 
     抽帧时间间隔
+
+- callback [Function] 
+
+    当有新帧图会触发函数
+
+    function(frames: string[], frame: string) {...}

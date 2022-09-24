@@ -1,6 +1,6 @@
 {
   "name": "video2frames",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast frame extraction from video in web applications",
   "main": "index.js",
   "keywords": ["video", "mp4", "image", "frames"],
